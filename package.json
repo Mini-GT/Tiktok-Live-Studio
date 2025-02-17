@@ -2,17 +2,19 @@
   "name": "tiktok-live-studio",
   "version": "1.0.0",
   "description": "Handles tiktok live comments and gifts",
-  "main": "./src/index.ts",
+  "main": "./src/tiktok.ts",
   "type": "module",
   "scripts": {
     "build": "npx tsc",
-    "start": "node ./dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./dist/tiktok.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch src --exec \"npm run build && npm start\""
   },
   "author": "MiniGT",
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.4.7",
+    "nodemon": "^3.1.9",
     "tiktok-live-connector": "^1.2.3"
   }
 }
